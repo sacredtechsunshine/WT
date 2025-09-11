@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WT" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,12 +64,13 @@
                             <constraint firstItem="wwf-Ti-LiU" firstAttribute="top" secondItem="qkd-Tl-52a" secondAttribute="bottom" constant="8" id="wt3-W0-Rqj"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Convert" image="thermometer.high" catalog="system" selectedImage="thermometer.high" id="VYX-6v-38F"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5.343511450381679" y="-2.1126760563380285"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="6KX-9R-8Ia">
             <objects>
                 <viewController id="CiK-5f-vcK" sceneMemberID="viewController">
@@ -78,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <standardMapConfiguration key="preferredConfiguration"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Item" id="L2x-B2-zQC"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.circle.fill" catalog="system" selectedImage="mappin.circle.fill" id="L2x-B2-zQC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1f-sN-j9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,10 +91,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZSr-qc-DZH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R7P-tf-6Y6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Xzz-2L-wL1"/>
                         <segue destination="CiK-5f-vcK" kind="relationship" relationship="viewControllers" id="UZL-LO-vtd"/>
                     </connections>
                 </tabBarController>
@@ -103,6 +106,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mappin.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="thermometer.high" catalog="system" width="80" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
